@@ -8,9 +8,29 @@
 const mongoose= require('mongoose');
 
 
+const commentsSchema = new mongoose.Schema(
+  {
+  content: {
+    type: String,
+    required: true,
+  },
+user: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+  userName: String,
+  userAvatar: String
+
+},
+{
+timestamps:true
+}
+)
+
 const carsSchema = new mongoose.Schema({
   link: String,
   title: String,
+
+  comments: [commentsSchema],
+
+  
 });
 
 
