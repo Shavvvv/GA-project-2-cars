@@ -7,13 +7,34 @@ create,
 index,
 show,
 delete:deletePost,
+edit,
 update
 }
 
+
+async function edit(req, res) {
+  const carToEdit = await CarModel.findOne({ _id: req.params.id }).exec();
+  if (!carToEdit) return res.redirect("/cars");
+  res.render("cars/edit", { car:carToEdit });
+}
 async function update(req ,res){
 
+    try {
+      const updatedcar = await CarModel.findOneAndUpdate(
+        { _id: req.params.id},
+        // update object with updated properties
+        req.body,
+        // options object {new: true} returns updated doc
+        { new: true }
+      );
+      return res.redirect(`/cars/${updatedcar._id}`);
+    } catch (e) {
+      console.log(e.message);
+      return res.redirect("/cars");
+    }
 
-  
+
+
 }
 
  async function deletePost(req,res){
@@ -32,9 +53,9 @@ async function update(req ,res){
 async function  show(req,res){
  // console.log(`now showing individual object ${req.params.id}`)
 try{
-  const carDocument = await CarModel.findById(req.params.id).exec();
+  const carDocument = await CarModel.findById(req.params.id);
 
-  console.log(`Now Viewing: ${carDocument}` )
+  console.log("Now Viewing" ,carDocument )
   res.render("cars/show", {car: carDocument});
 
 }catch(err){

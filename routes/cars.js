@@ -12,6 +12,9 @@ router.get('/:id', carsCtrl.show)
 
 router.delete('/:id',carsCtrl.delete)
 
+
+router.get('/:id/edit',carsCtrl.edit)
+
 router.put('/:id',carsCtrl.update)
 
 module.exports=router;
