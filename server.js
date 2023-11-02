@@ -9,6 +9,7 @@ const session = require('express-session');
 const passport = require('passport');
 const methodOverride = require('method-override');
 const indexRoutes = require('./routes/index');
+const carRoutes= require('./routes/cars')
 
 
 // create the Express app
@@ -52,6 +53,8 @@ app.use(function (req, res, next) {
 // mount all routes with appropriate base paths
 app.use('/', indexRoutes);
 
+//
+app.use('/cars',carRoutes);
 
 // invalid request, send 404 page
 app.use(function(req, res) {
