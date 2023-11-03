@@ -12,22 +12,22 @@
 <body>
   <nav>
     <img class="logo" src="https://i.imgur.com/Gj5LzcN.png">
-    <a href="/cars">ALL cars</a>
+   
 
     <!-- user comes from res.locals.user = req.user in the server.js file!!!!!!! -->
     <!-- user will be the mongodb document if logged in
     if not the user will be undefined meaning they are not logged in -->
     <% if (user) { %>
-
-      <a href="/cars/uploads">My uploads</a>
+ <a href="/cars">ALL cars</a>
+    <!--  <a href="/cars/uploads">My uploads</a>
 
       <a href="/cars/new">
-        tags</a>
+        tags</a> -->
       <a href="/cars/new">ADD car</a>
       <a href="/logout">logout</a>
 
      <% } else { %>
-      <a href="/auth/google" class="login"> LOGIN&nbsp;<img src="" /> </a><!-- https://i.imgur.com/FHjYyi0.png-->
+      <a href="/auth/google" class="login"> LOGIN  </a><!-- https://i.imgur.com/FHjYyi0.png-->
      <% } %>
 
 
