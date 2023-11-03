@@ -1,3 +1,5 @@
+<%- include('../partials/header') %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +8,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>edit page</h1>
+    <% if(user){ %>
+    <h1>edit post</h1>
 <div class="edit" >
     <form action="/cars/<%= car._id %>?_method=PUT" method="POST">
         <label for="">Link </label>
@@ -15,5 +18,7 @@
         <input type="text" name="title">
         <input type="submit" value="upload">
     </div>
+
+    <% } %>
 </body>
 </html>
