@@ -36,7 +36,7 @@
 * {
   box-sizing: border-box;
   font-family: Helvetica;
-  color: #424748;
+  color: rgb(244, 208, 109);
 }
 
 body {
@@ -51,7 +51,7 @@ body {
 
 body > nav {
   grid-area: nav;
-  background-color: #B8C0C2;
+  background-color: rgb(145, 130, 131);
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -69,7 +69,11 @@ body > main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #E8ECEB;
+  background-image: url('https://i.pinimg.com/originals/2b/de/7d/2bde7d14133968f97d6c4dd898edb989.gif');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  background-color: #A3ECEB;
   padding: 20px;
   overflow-y: scroll;
 }
@@ -216,7 +220,7 @@ img {
 div.container {
   font-size: 25px;
   background-color: lightgrey;
- 
+  transition: transform .2s;
   color:#ACABD7;
   text-align: center;
   padding: 10px 20px;
@@ -224,10 +228,33 @@ div.container {
 
 
 
+div.polaroid:hover{
+  border-top:0px ;
+  border-bottom-left-radius: 45px;
+  border-bottom-right-radius: 45px;
+  background-color: #ACABD7;
+  color: white;
+  transform: scale(1.5)
+}
+
 div.container:hover{
   border-top:0px ;
   border-bottom-left-radius: 45px;
   border-bottom-right-radius: 45px;
   background-color: #ACABD7;
   color: white;
+
+}
+img.show-post{
+  border-radius: 9%;
+  height:auto;
+  width: 43%;
+  /*border-radius: 45px;*/
+  border-top: 0px;
+}
+
+img.logo{
+  background-color: rgb(145, 130, 131);
+  border-radius: 20%;
+  height:auto;
 }

@@ -1,25 +1,29 @@
-# passport-boilerplate
+# GA-Project2 
+
+# Cars-RedLine
+
+Hello all and welcome to my project. This is a social photo sharing web application made utilizing my knowlege of full stack development. Its purpose is allow users to upload their images and share it, allowing others to comment as well.With this being a user centric CRUD application, they will be allowed to edit  posts they've made, as well as delete comments. I look ofrward to seeing all your pictures and hearing about your experience!
+
+https://courageous-pantsuit-tick.cyclic.app/"GA-project-2"
 
 
-This is your passport boilerplate.
+## Guide
 
-## Setup 
+1. You will be presented with the initial page requesting you to log in to continue.
+2. Once logged in, you will have full access,with the ability to  to view the posts made by other users and comment on a post. 
+3. You also have the ability to link your own images with a caption, that others can comment on.
+* If you are copying an image from a website, make sure to _Copy image address_
+* If its an upload from your pc, Its best to upload first to [imgur](https://imgur.com/"imgur") , then copy the DIRECT LINK 
+4. If your image didnt render on the screen you have the ability to edit the post2.
 
-1. Clone the repo
-2. Rename the folder to your Project
-3. Delete the `.git` file, when you are in the root of the file, you can press `ls` and you should see a `.git` file, then go ahead and run `rm -rf .git`
 
 
-#### Setup your git repo
-0. Setup your `.env` file and add all the things you need! (look at mongoose movies for reference!)
-1. in the project root `git init`
-2. `git add .` to add all the starter code
-3. `git commit -m "setup boilerplate"` 
-4. go to github and create your github and create a repo (Without a readme or liscense you can add that later!)
-5. copy the remote address
-6. In your terminal add the remote `git remote add origin yourGithubRepo'sAddressGoesHere`
-7. `git pull origin main` If a screen pulls up asking you to do something just press `:q` and then `enter` (thats vim btw :) )
-8. `git push origin main`
+
+#### Key Technologies Used
+ [Node.JS] (https://nodejs.org/en/about "Node.js")
+ [Express.js] (https://expressjs.com/"Express")
+ [Mongoose] (https://mongoosejs.com/docs/index.html"Mongoose")
+ [mongoDB] (https://www.mongodb.com/atlas"mongoDB Atlas")
 
 #### Setup your login (THE APP WON'T WORK until you do, no VIEWS are setup, or the landing route)
 

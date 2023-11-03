@@ -10,8 +10,10 @@
 </head>
 <body>
 	<h1>Show Page working</h1>
-	<img src="<%= car.link %>"  >
+	<img class="show-post" src="<%= car.link %>"  >
 	
+
+ 
 
 	<form action="/cars/<%= car.id %>?_method=DELETE"
 		class="delete-form" method="POST">
@@ -19,6 +21,8 @@
 	  </form>
 
 	  <a href="/cars/<%= car._id %>/edit">edit post</a>
+ <% if (user && user._id.equals(car.user)) { %>
+    <% } %>
 
 
 
