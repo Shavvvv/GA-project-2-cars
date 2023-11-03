@@ -2,9 +2,13 @@
 
 # Cars-RedLine
 
-Hello all and welcome to my project. This is a social photo sharing web application made utilizing my knowlege of full stack development. Its purpose is allow users to upload their images and share it, allowing others to comment as well.With this being a user centric CRUD application, they will be allowed to edit  posts they've made, as well as delete comments. I look ofrward to seeing all your pictures and hearing about your experience!
+Hello all and welcome to my [project](https://courageous-pantsuit-tick.cyclic.app/"GA-project-2")
+. This is a social photo sharing web application made utilizing my knowlege of full stack development. Its purpose is allow users to upload their images and share it, allowing others to comment as well.With this being a user centric CRUD application, they will be allowed to edit  posts they've made, as well as delete comments. I look ofrward to seeing all your pictures and hearing about your experience!
 
-https://courageous-pantsuit-tick.cyclic.app/"GA-project-2"
+
+## Screenshot
+
+![Cars-img](https://i.imgur.com/rZ5txmZ.png"Cars Page")
 
 
 ## Guide
@@ -19,21 +23,18 @@ https://courageous-pantsuit-tick.cyclic.app/"GA-project-2"
 
 
 
-#### Key Technologies Used
+## Key Technologies Used
  [Node.JS] (https://nodejs.org/en/about "Node.js")
  [Express.js] (https://expressjs.com/"Express")
  [Mongoose] (https://mongoosejs.com/docs/index.html"Mongoose")
  [mongoDB] (https://www.mongodb.com/atlas"mongoDB Atlas")
 
-#### Setup your login (THE APP WON'T WORK until you do, no VIEWS are setup, or the landing route)
 
-0. Setup your database connection string
-1. Then Setup Your User Model, 
-2. Follow the steps from the lesson plan to get your Google login credentials for your `.env` file (create the file if you haven't), or you can just copy the ones from earlier if you want to reuse them.
-3. Setup the Code in your config passport 
-4. Setup your callback routes in your `routes/index`
-5. Setup a view and test your login!
+## Moving Forward...
 
-#### Make a commit 
+I plan on rendering the web app more functionality such as:
+allowing the user to perform CRUD operations on their personal information, an throughout other aspects of the application.
+A category option, where it will filter out different posts based on their key terms like "memes" or "performance"
 
-```git commit -m "setup up oauth and User Model"```
+
+
