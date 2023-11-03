@@ -8,7 +8,7 @@ Hello all and welcome to my [project](https://courageous-pantsuit-tick.cyclic.ap
 
 ## Screenshot
 
-![Cars-img](https://i.imgur.com/rZ5txmZ.png"Cars Page")
+![Cars-img](https://i.imgur.com/rZ5txmZ.png "Cars Page")
 
 
 ## Guide
