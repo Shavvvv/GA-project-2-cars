@@ -1,6 +1,6 @@
 # GA-Project2 
 
-# Cars-RedLine
+# Cars-RevLine
 
 Hello all and welcome to my [project](https://courageous-pantsuit-tick.cyclic.app/ "GA-project-2")
 . This is a social photo sharing web application made utilizing my knowlege of full stack development. Its purpose is allow users to upload their images and share it, allowing others to comment as well.With this being a user centric CRUD application, they will be allowed to edit  posts they've made, as well as delete comments. I look ofrward to seeing all your pictures and hearing about your experience!
@@ -33,8 +33,8 @@ Hello all and welcome to my [project](https://courageous-pantsuit-tick.cyclic.ap
 ## Moving Forward...
 
 I plan on rendering the web app more functionality such as:
-allowing the user to perform CRUD operations on their personal information, an throughout other aspects of the application.
-A category option, where it will filter out different posts based on their key terms like "memes" or "performance"
+* Allowing the user to perform CRUD operations on their personal information, an throughout other aspects of the application.
+* A category option, where it will filter out different posts based on their key terms like "memes" or "performance"
 
 
 

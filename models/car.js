@@ -14,25 +14,28 @@ const commentsSchema = new mongoose.Schema(
     type: String,
     required: true,
   },
+
+ 
 user: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
   userName: String,
   userAvatar: String
 
 },
 {
-timestamps:true
+timestamps:true,
 }
-)
+
+);
 
 const carsSchema = new mongoose.Schema({
   link: String,
   title: String,
 
   comments: [commentsSchema],
-/////////
+/*
   user: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
   userName: String,
-  userAvatar: String,
+  userAvatar: String,*/
 });
 
 

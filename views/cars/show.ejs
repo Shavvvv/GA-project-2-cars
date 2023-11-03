@@ -13,7 +13,6 @@
 	<img class="show-post" src="<%= car.link %>"  >
 	
 
- 
 
 	<form action="/cars/<%= car.id %>?_method=DELETE"
 		class="delete-form" method="POST">
@@ -21,10 +20,9 @@
 	  </form>
 
 	  <a href="/cars/<%= car._id %>/edit">edit post</a>
- <% if (user && user._id.equals(car.user)) { %>
-    <% } %>
 
 
+  
 
 	  <br><br>
 <h2>Reviews</h2>
@@ -33,19 +31,13 @@
     <!-- user will be the mongodb document if logged in
     if not the user will be undefined meaning they are not logged in -->
 <% if (user) { %>
-
+ 
+  
   <form id="add-review-form" method="POST" action="/cars/<%= car._id %>/comments">
-    <label>Review:</label>
+    <label>Comments:</label><br>
     <textarea name="content"></textarea>
-    <label>Rating:</label>
-    <select name="rating">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-    </select>
-    <input type="submit" value="Add Review">
+   
+    <input type="submit" value="comment">
   </form>
  
 <% } else { %>
@@ -54,18 +46,30 @@
 
 
 <% if (car.comments.length) { %>
- 
-
-    
-   
+  <table>
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>Date</th>
+        <th>Review</th>
+        
+      </tr>
+    </thead>
+    <tbody>
       <% let total = 0 %>
-      <% car.comments.forEach(function(r) { %>
-        <% total += r.rating %>
+      <% car.comments.forEach(function(comment) { %>
+       
         <tr>
+          <!-- // referrerpolicy we neecd to add this so google lets us use the avatar image -->
+          <td class="review-user"><img alt="avatar" src="<%= comment.userAvatar %>" referrerpolicy="no-referrer" ><%= comment.userName %></td>
+          <td><%= comment.createdAt.toLocaleDateString('en-GB', { timeZone: 'UTC' }) %></td>
+          <td><%= comment.content %></td>
          
-          
-            <% if (user && user._id.equals(r.user)) { %>
-              <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
+          <td>
+            <!-- first checking to see if the user exist (if user)
+            then check to see if user._id is equal to reviews user id (r.user) -->
+            <% if (user && user._id.equals(comment.user)) { %>
+              <form action="/comments/<%= comment._id %>?_method=DELETE" method="POST">
                 <button type="Submit">X</button>
               </form>
             <% } %>
@@ -81,7 +85,5 @@
 <% } else { %>
   <h5>No Reviews Yet</h5>
 <% } %>
-
-	
 </body>
 </html>

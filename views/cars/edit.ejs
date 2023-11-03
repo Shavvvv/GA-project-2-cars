@@ -13,9 +13,9 @@
 <div class="edit" >
     <form action="/cars/<%= car._id %>?_method=PUT" method="POST">
         <label for="">Link </label>
-        <input type value="insert" name="link"> <br>
+        <input type value="<%= car.link %>" name="link" required> <br>
         <label for="">description</label>
-        <input type="text" name="title">
+        <input type="text"  value="<%= car.title %>"required>
         <input type="submit" value="upload">
     </div>
 

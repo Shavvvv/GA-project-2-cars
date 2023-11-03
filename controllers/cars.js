@@ -38,11 +38,11 @@ async function update(req ,res){
 }
 
  async function deletePost(req,res){
-
+/////////// friday updatee
 
     await CarModel.findOneAndDelete(
       // Query object that ensures the book was created by the logged in user
-      { _id: req.params.id/*, userRecommending: req.user._id*/ }
+      { _id: req.params.id , /*postcreator: req.user._id */}
     );
     // Deleted book, so must redirect to index
     res.redirect("/cars");
